@@ -1,0 +1,88 @@
+:root{
+  --accent:#004f90;
+  --bg:#ffffff;
+  --muted:#555;
+  --card:#fbfbfb;
+  --max:980px;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:28px;
+}
+
+.site-header{
+  border-bottom:1px solid #eee;
+  background:white;
+}
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.name{margin:0;font-size:20px;letter-spacing:0.6px}
+.role{margin:4px 0 0;color:var(--muted);font-size:13px}
+.contact a{color:var(--accent);text-decoration:none;font-size:13px}
+.contact{font-size:13px}
+
+.card{
+  background:var(--card);
+  padding:18px;
+  margin:18px 0;
+  border-radius:8px;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.02);
+}
+
+h2{margin:0 0 10px;font-size:16px;color:var(--accent)}
+.project + .project{margin-top:12px}
+.meta{color:var(--muted);font-size:13px;margin:4px 0 8px}
+
+.skills-grid{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+.skills-grid li{
+  background:white;
+  padding:8px 10px;
+  border-radius:6px;
+  font-size:14px;
+  border:1px solid #eee;
+}
+
+.site-footer{
+  margin-top:20px;
+  border-top:1px solid #eee;
+  padding:18px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.meta .date,
+.project .date {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+
+.quick-links a{color:var(--accent);text-decoration:none;font-weight:600}
+@media (max-width:720px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:8px}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .date{float:none;display:block;margin-top:6px}
+}
